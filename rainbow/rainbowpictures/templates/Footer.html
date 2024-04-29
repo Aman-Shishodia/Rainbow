@@ -1,0 +1,224 @@
+{% load static %}
+<html>
+  <head>
+    <link rel="stylesheet" href="{% static 'index.css' %}" />
+    <style>
+      footer {
+        /* height: 90vh; */
+        display: flex;
+        align-items: end;
+      }
+
+      #footer-part1 {
+        border-top-right-radius: 6px;
+        height: 90vh;
+        width: 52%;
+        background: linear-gradient(145deg, #f81f01 0%, #ee076e 100%);
+        position: relative;
+        color: #fff;
+        padding-left: 10vw;
+        padding-top: 5vw;
+        /* z-index: 2; */
+      }
+
+      #footer-part1::before {
+        content: "";
+        position: absolute;
+        background: url(./assests/pattern-1.png);
+        top: 0;
+        left: 0;
+        height: 90vh;
+        width: 100%;
+        opacity: 0.5;
+        z-index: 1;
+        border-top-right-radius: 6px;
+      }
+
+      #footer-part1::after {
+        content: "";
+        background-image: url(./assests/pattern-2.png);
+        position: absolute;
+        right: 20%;
+
+        top: 50%;
+        width: 295px;
+        height: 301px;
+        z-index: 1;
+        color: rgba(0, 0, 0, 0.1);
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+      }
+
+      #footer-part1 p {
+        font-size: 1.2vw;
+        margin: 2vw 0;
+        letter-spacing: 0.1vw;
+      }
+
+      #footer-part1 h1 {
+        font-size: 6vw;
+        line-height: 5.5vw;
+        font-weight: 900;
+        position: relative;
+        z-index: 2;
+        /* margin-bottom: 4vw; */
+      }
+      #footer-part1 h1:nth-child(3) {
+        margin-bottom: 4vw;
+      }
+
+      #footer-part1 > a {
+        position: relative;
+        z-index: 2;
+        padding: 1.4vw 3vw;
+        font-size: 1.1vw;
+        font-weight: 700;
+        letter-spacing: 0.1vw;
+        background: transparent;
+        border: 2px solid #fff;
+        color: #fff;
+        border-radius: 10px;
+        text-decoration: none;
+        text-transform: uppercase;
+        margin-top: 4vw;
+        /* padding-top: 4vw; */
+        cursor: pointer;
+      }
+      #footer-part1 > a:hover {
+        color: #f81f01;
+        background-color: #fff;
+      }
+      #footer-part2 {
+        height: 82vh;
+        width: 48%;
+      }
+
+      #footer-part2 {
+        height: 82vh;
+        width: 48%;
+        /* background: linear-gradient(145deg, #f81f01 0%, #ee076e 100%); */
+        background-color: #1d1e24;
+        display: flex;
+        color: #9b9fab;
+        padding-top: 5%;
+        position: relative;
+        /* justify-content: center; */
+        /* align-items: center; */
+      }
+
+      #footer-part2-left {
+        /* border: 2px solid white; */
+        width: 50%;
+        /* height: 100%; */
+        margin-left: 12%;
+      }
+      #footer-part2-left #footer-links {
+        display: flex;
+        flex-direction: column;
+      }
+      #footer-part2-right h3 {
+        padding: 2vw 0;
+        font-size: 2vw;
+        font-weight: 200;
+      }
+      #footer-part2-left h3 {
+        padding: 2vw 0;
+        font-size: 2vw;
+        font-weight: 200;
+      }
+      #footer-links a {
+        text-decoration: none;
+        /* color: #fff; */
+        margin: 0.5vw 0;
+        color: #9b9fab;
+      }
+      #footer-links a:hover {
+        color: #f81f01;
+      }
+      #footer-part2-right {
+        /* border: 2px solid white; */
+        width: 50%;
+      }
+      #footer-links p {
+        margin: 1vw 0;
+      }
+      #copyright{
+        position: absolute;
+        bottom: 5%;
+        left: 15%;
+        /* transform: translate(-50%,0%); */
+      }
+      @media (max-width:720px) {
+        footer{
+          flex-direction: column;
+        }
+        #footer-part1{
+          width: 100%;
+          height: 22vh;
+        }
+        #footer-part2{
+          width: 100%;
+          height: 28vh;
+          flex-direction: column;
+          /* margin-left: 10vw; */
+        }
+        #footer-part2-left{
+          margin-left: 10%;
+        }
+        #footer-part2-right{
+          margin-left: 10%;
+        }
+        #footer-part2-left h2{
+          font-size: 1.2vw;
+        }
+        #footer-links p,a{
+          font-size: 1.4vw;
+        }
+        #footer-part2 p{
+          font-size: 1.4vw;
+        }
+        #copyright{
+          left: 30%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <footer>
+        <div id="footer-part1">
+          <p>READY TO DO THIS</p>
+          <h1>Let's get</h1>
+          <h1>to work</h1>
+          <a href="{% url 'Contact' %}">Contact Us</a>
+        </div>
+        <div id="footer-part2">
+            <div id="footer-part2-left">
+              <h3>Quick links</h3>
+              <div id="footer-links">
+                <a href="{% url 'Home' %}">Home</a>
+                <a href="{% url 'About' %}">About</a>
+                <a href="{% url 'Services' %}">Services</a>
+                <a href="{% url 'Portfolio' %}">Portfolio</a>
+                <a href="{% url 'Marketing' %}">Marketing</a>
+                <a href="{% url 'Contact' %}">Contact</a>
+                <a href="{% url 'Clients' %}">Clients</a>
+              </div>
+            </div>
+            <div id="footer-part2-right">
+              <h3>Contact details</h3>
+              <div id="footer-links">
+                <p>+91 8860000581</p>
+                <p>+91 9960000576</p>
+                <p>rainbowpictures9@gmail.com</p>
+                <p>A-108B, Sector-58, Noida – 201301</p>
+              </div>
+          </div>
+          <p id="copyright">Copyright © 2021 Rainbow Pictures | All Right Reserved </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+  <script src="../static/script.js"></script>
+</html>

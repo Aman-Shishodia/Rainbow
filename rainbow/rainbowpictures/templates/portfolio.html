@@ -1,0 +1,106 @@
+<!-- {% load static %} -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'index.css' %}" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      #portfolio{
+        overflow: hidden;
+      }
+
+      #portfolio-page1 {
+        width: 100%;
+        height: 80vh;
+        position: relative;
+      }
+
+      #portfolio-page1 img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        filter: brightness(60%);
+      }
+
+      #portfolio-page1 h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 4vw;
+        /* color: #fff; */
+        color: #f81f01;
+        text-transform: capitalize;
+      }
+
+      #portfolio-page2 {
+        padding: 3vw;
+      }
+
+      #portfolio-page2 p {
+        color: #232323c4;
+        font-size: 1.2vw;
+        margin: 2vw;
+      }
+      @media (max-width:720px){
+        #portfolio-page1{
+          height: 45vh;
+        }
+      }
+    </style>
+  </head>
+  <body>
+      {% include 'Navbar.html' %}
+    <div id="portfolio">
+      <div id="portfolio-page1">
+        <img src="../static/assests/portfolio.jpg" alt="img" />
+        <h1>Portfolio</h1>
+      </div>
+      <div id="portfolio-page2">
+        <p>
+          Rainbow Pictures is a Production House establish in 2019 engaged in
+          providing Pre-Production and post-production services for
+          Advertisements and Numerous alternative media. We cater to varied
+          acknowledged organisations for all their sound as well as Video
+          Editing needs, Voice Overs, Visual and Special effects and much more.
+          Our services portfolio includes the creation of AD Films,
+          Documentary/Short Film, Video Film Production/Video Editing,
+          Non-Linear Editing, Audio Visual Production, Community Radio Setup,
+          Video Coverage, Advertising, Audio Recording/Dubbing and Media
+          Consultancy. Our team has over 20 years of hands-on experience in the
+          field of Media and entertainment. We have delivered over 100 projects
+          including the grand scale projects (4K, 6K, RED etc).
+        </p>
+        <p>
+          After two decades producing corporate videos, commercials, television
+          shows, and feature films, our expertise has a wide range. We have won
+          numerous awards for our clients over the years and take pride in over
+          delivering.
+        </p>
+        <p>
+          Lately, we have been doing a lot of work for Real Estate, medical
+          industry, construction industry, corporate events and conferences,
+          explainer videos and reality television. For these videos, we have
+          used conventional shooting, 2D and 3D animation, specialised shooting
+          with jibs, sliders and dollies, and time-lapse.
+        </p>
+        <p>
+          Rainbow Pictures believes in building long and genuine relationships
+          with all our clients. We believe in long term associations and that is
+          why, from the start we invest our time, efforts and expertise to
+          advise and help our clients to reach their marketing & Business goals.
+        </p>
+      </div>
+    </div>
+    {% include 'Footer.html' %}
+  </body>
+</html>

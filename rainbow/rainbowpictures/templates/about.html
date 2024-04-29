@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        #about{
+            overflow: hidden;
+        }
+      #about-page1 {
+        width: 100%;
+        height: 80vh;
+        position: relative;
+      }
+      #about-page1 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(60%);
+      }
+      #about-page1 h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 4.5vw;
+        /* color: #fff; */
+        color: #f81f01;
+        text-transform: capitalize;
+      }
+      #about-page2{
+        padding: 3vw;
+        display: flex;
+        /* justify-content: space-between; */
+      }
+      #about-page2-left{
+        width: 40%;
+ 
+      }
+      #about-page2-left img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+      }
+      #about-page2-right{
+        width: 60%;
+
+      }
+      #about-page2-right h1{
+        font-size: 4vw;
+        padding-left: 3vw;
+        color: #141418;
+      }
+      #about-page2-right p{
+        font-size: 1.2vw;
+        /* color: #1F1F25; */
+        /* color: #000000e8; */
+        color: #232323c4;
+        padding: .8vw 0;
+        padding-left: 3vw;
+      }
+      #about-page3{
+        height: 110vh;
+        width: 100%;
+        position: relative;
+    }
+    #about-page3 img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(70%);
+      }
+      #about-page3-container{
+        /* border: 2px solid red; */
+        border-radius: 10px;
+        padding: 3vw 3vw;
+        height: 80vh;
+        width: 26vw;
+        position: absolute;
+        top: 14%;
+        right: 6%;
+        background-color: #272527;
+        color: #fff;
+      }
+      #about-page3-container h1{
+        font-weight: 500;
+        color: #f9004d;
+        line-height: 3.5vw;
+        font-size: 3vw;
+      }
+      #about-page3-container p{
+        font-size: 1.2vw;
+        margin-top: 2vw;
+        line-height: 2vw;
+        margin-bottom: 3vw;
+        /* color: #232323c4; */
+      }
+      #about-page3-container a{
+        text-decoration: none;
+        padding: .8vw 1.4vw;
+        border: 2px solid #fff;
+        color: #fff;
+        font-size: 1.2vw;
+        text-transform: uppercase;
+        border-radius: 2px;
+        /* margin-top: 3vw; */
+      }
+      #about-page3-container a:hover{
+        background-color: #f9004d;
+        transition: all .1s linear;
+      }
+      
+      #clients-page2 {
+        padding: 3vw;
+        margin-bottom: 5vw;
+      }
+
+      #clients-page2 h1{
+        font-size: 2vw;
+        text-align: center;
+        margin: 2vw 0;
+        margin-bottom: 3vw;
+      }
+
+      #clients-img {
+        padding: auto;
+      }
+
+      #clients-page2 img {
+        width: 12vw;
+        margin: 1.5vw;
+      }
+      #about-page4{
+        padding: 3vw;
+        height: 85vh;
+        /* border: 2px solid red; */
+        display: flex;
+        /* justify-content: space-between; */
+      }
+      #about-page4-part1{
+        width: 40%;
+      }
+      #about-page4-part1 img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+      }
+      #about-page4-part2{
+        width: 60%;
+
+      }
+      #about-page4-part2 h1{
+        font-size: 4vw;
+        margin-top: 3vw;
+        /* padding-left: 3vw; */
+        color: #141418;
+      }
+      #about-page4-part2 p{
+        font-size: 1.2vw;
+        /* color: #1F1F25; */
+        margin-top: 2vw;
+        padding: .8vw 0;
+        padding-right: 3vw;
+        /* color: #000000e8; */
+        color: #232323c4;
+      }
+      @media (max-width:720px){
+        #about-page1{
+          height: 45vh;
+        }
+        #about-page2{
+        /* padding: 3vw; */
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-between; */
+      }
+      #about-page2-right{
+        width: 100%;
+
+      }
+      #about-page2-left{
+        width: 100%;
+        display: none;
+      }
+      #about-page4{
+        height: 55vh;
+        flex-direction: column-reverse;
+      }
+      #about-page4 img{
+        width: 100%;
+        height: 40vh;
+        object-position: center;
+      }
+      #about-page4-part1{
+        width: 100%;
+      }
+      #about-page4-part2{
+        width: 100%;
+      }
+      #about-page3{
+        height: 40vh;
+      }
+      #about-page3-container{
+        height: 26vh;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    {% include 'Navbar.html' %}
+    <div id="about">
+      <div id="about-page1">
+        <img src="../static/assests/About-us_banner.jpg" alt="" srcset="" />
+        <h1>About us</h1>
+      </div>
+      <div id="about-page2">
+        <div id="about-page2-left">
+            <img src="../static/assests/about.jpg" alt="">
+        </div>
+        <div id="about-page2-right">
+            <h1>About Us</h1>
+            <p>Rainbow Pictures as the name suggests is a production house engaged in providing production and post production services for advertisement and various other media. We provide assistance to various reputed organization for all their sound as well as video editing needs, voice overs, visual and special effects, etc</p>
+            <p>Our service range includes Ad Film making, Documentary,/Short Film Making, Video Film production/ Video Editing, Non Linear Editing, Audio Visual Production, Community radio Setup, Video Coverage, Advertising , Audio recording/ Dubbing and Media Consultancy</p>
+            <p>Under the guidance of experts directors and production house has achieved soaring heights of success. We can also provide complete assistance to organization regarding  production and post production work. Right from sound editing to copying , adaptation, special effects, visual effects and graphics, we can create innovative concepts and advertisements. </p>
+        </div>
+      </div>
+      <div id="about-page4">
+       
+        <div id="about-page4-part2">
+            <h1>Our objective</h1>
+            <p>Our Objective is to ensure that our clients receive a positive and problem-free experience throughout the entire production process. We take care of the technical coordination between all the different parts of the process and our methods of working from online to offline delivery so that the delays or problem can be avoided.</p>
+        </div>
+        <div id="about-page4-part1">
+
+            <img src="../static/assests/about4.jpg" alt="">
+        </div>
+      </div>
+      <div id="about-page3">
+        <img src="../static/assests/about-3.jpg" alt="">
+        <div id="about-page3-container">
+            <h1>Let's get to the bottom of it.</h1>
+            <p>We are excited to be part of your project, regardless of its scope or structure. We can develop together or get to the finish line with no looking backs or unseen humps; let's make it good.</p>
+            <a href="{% url 'Contact' %}">Get started</a>
+        </div>
+      </div>
+      <div id="clients-page2">
+        <h1>Featured clients</h1>
+        <div id="clients-img">
+          <img src="../static/assests/client1.png" alt="" />
+          <img src="../static/assests/client2.png" alt="" />
+          <img src="../static/assests/client3.png" alt="" />
+          <img src="../static/assests/client4.png" alt="" />
+          <img src="../static/assests/client5.png" alt="" />
+          <img src="../static/assests/client6.png" alt="" />
+          <img src="../static/assests/client7.png" alt="" />
+          <img src="../static/assests/client8.png" alt="" />
+          <img src="../static/assests/client9.png" alt="" />
+          <img src="../static/assests/client10.png" alt="" />
+          <img src="../static/assests/client11.png" alt="" />
+          <img src="../static/assests/client12.png" alt="" />
+          <img src="../static/assests/client13.png" alt="" />
+          <img src="../static/assests/client14.png" alt="" />
+          <img src="../static/assests/client15.png" alt="" />
+          <img src="../static/assests/client16.png" alt="" />
+          <img src="../static/assests/client17.png" alt="" />
+          <img src="../static/assests/client18.png" alt="" />
+          <!-- <img src="../static/assests/client19.png" alt=""> -->
+        </div>
+    </div>
+    {% include 'Footer.html' %}
+  </body>
+</html>

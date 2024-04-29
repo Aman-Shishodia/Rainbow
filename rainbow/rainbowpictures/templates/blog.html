@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        #blog{
+            overflow: hidden;
+        }
+        #blog-page1 {
+        width: 100%;
+        height: 80vh;
+        position: relative;
+      }
+
+      #blog-page1 img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        filter: brightness(60%);
+      }
+
+      #blog-page1 h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 5vw;
+        /* color: #fff; */
+        color: #f81f01;
+        text-transform: capitalize;
+      }
+
+      #blogs{
+        margin-bottom: 5vw;
+        padding: 3vw;
+        display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 3vw;
+      }
+
+      #blog-container{
+        width: 28vw;
+        padding: 3vw;
+        background-color:  #f30e65;
+        color: #fff;
+        height: auto;
+        border: 2px solid red;
+      }
+
+      #blog-container p{
+        margin: 1vw 0;
+      }
+        
+    </style>
+</head>
+<body>
+    {% include 'Navbar.html' %}
+    <div id="blog">
+        <div id="blog-page1">
+            <img src="../static/assests/blog.jpg" alt="" srcset="">
+            <h1>Blogs</h1>
+        </div>
+        <div id="blogs">
+            <div id="blog-container">
+                <h1>Hello World</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus sapiente commodi quam exercitationem minima consequuntur blanditiis qui rem, animi aperiam quaerat officia quod praesentium eligendi voluptates quibusdam quisquam similique beatae. Ipsam qui, excepturi quae libero inventore sed facere quisquam, odit recusandae sequi debitis veniam. Culpa autem dicta saepe doloribus delectus.</p>
+            </div>
+            <div id="blog-container">
+                <h1>Hello World</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus sapiente commodi quam exercitationem minima consequuntur blanditiis qui rem, animi aperiam quaerat officia quod praesentium eligendi voluptates quibusdam quisquam similique beatae. Ipsam qui, excepturi quae libero inventore sed facere quisquam, odit recusandae sequi debitis veniam. Culpa autem dicta saepe doloribus delectus.</p>
+            </div>
+            <div id="blog-container">
+                <h1>Hello World</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus sapiente commodi quam exercitationem minima consequuntur blanditiis qui rem, animi aperiam quaerat officia quod praesentium eligendi voluptates quibusdam quisquam similique beatae. Ipsam qui, excepturi quae libero inventore sed facere quisquam, odit recusandae sequi debitis veniam. Culpa autem dicta saepe doloribus delectus.</p>
+            </div>
+            <div id="blog-container">
+                <h1>Hello World</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus sapiente commodi quam exercitationem minima consequuntur blanditiis qui rem, animi aperiam quaerat officia quod praesentium eligendi voluptates quibusdam quisquam similique beatae. Ipsam qui, excepturi quae libero inventore sed facere quisquam, odit recusandae sequi debitis veniam. Culpa autem dicta saepe doloribus delectus.</p>
+            </div>
+        </div>
+    </div>
+
+{% include 'Footer.html' %}

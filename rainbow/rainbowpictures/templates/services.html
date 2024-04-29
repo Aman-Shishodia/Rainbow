@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #services{
+            overflow: hidden;
+        }
+        #service-page1{
+            height: 80vh;
+            width: 100%;
+            position: relative;
+        }
+        #service-page1 img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(60%);
+        }
+        #service-page1 h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 5vw;
+        /* color: #fff; */
+        color: #f81f01;
+        text-transform: capitalize;
+      }
+        #service-page2{
+            padding: 3vw;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            row-gap: 3vw;
+            /* display: flex; */
+        }
+        #service-page2-container{
+            width: 28vw;
+            height: 90vh;
+            /* border: 2px solid red; */
+        }
+        #service-page2-container img{
+            width: 100%;
+            height: 50%;
+            object-fit: cover;
+        }
+        #service-page2-container h1{
+            font-weight: 200;
+            font-size: 4vw;
+            text-align: center;
+            margin: 1vw 0;
+        }
+        #service-page2-container p{
+            font-size: 1.2vw;
+            color: #232323c4;
+        }
+        #services>h1{
+            text-align: center;
+            font-size: 4vw;
+            margin: 2vw 0;
+        }
+        #service-page3{
+            padding: 3vw;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            background-color: #f30e65;
+            color: #fff;
+            margin: 3vw 0;
+        }
+        #service-page3 h1{
+            text-align: center;
+            margin: .3vw 0;
+            font-size: 4vw;
+        }
+        #service-page3 p{
+            text-align: center;
+            font-size: 1.2vw;
+        }
+        @media (max-width:720px){
+        #service-page1{
+          height: 45vh;
+        }
+        #service-page2{
+            grid-template-columns: 1fr;
+        }
+        #service-page2-container {
+            width: 100%;
+            height: 30vh;
+            /* border: 2px solid red; */
+        }
+        #service-page2-container img{
+            height: 70%;
+        }
+        #service-page2-container h1{
+            text-align: left;
+        }
+    }
+    </style>
+</head>
+<body>
+    {% include 'Navbar.html' %}
+    <div id="services">
+        <div id="service-page1">
+            <img src="../static/assests/services.jpg" alt="">
+            <h1>Services</h1>
+        </div>
+        <h1>What we do</h1>
+        <div id="service-page2">
+
+                <div id="service-page2-container">
+                    <img src="../static/assests/Broadcast Equipment.jpg" alt="">
+                    <h1>Broadcast Equipment</h1>
+                    <p>Telling a story and communicating a message in 30-60 seconds requires a great deal of focus and concentration during the development and writing phase. we’re always excited to tackle a new commercial project for TV distribution and also for web. We understand the power of online advertisement through viral video on You tube and other online mediums.</p>
+                </div>
+                <div id="service-page2-container">
+                    <img src="../static/assests/Corporate Productions.jpg" alt="">
+                    <h1>Corporate Productions</h1>
+                    <p>Rainbow Picture process is designed to hold your hand throughout the entire corporate video creation. We work together to compile your branding measures and transform them into a creative brief . From there, we manage all steps in the production process from 6 concept development to scrip writing, from hiring talent to the physical shoot, and from the edit to post production and animation.</p>
+                </div>
+                <div id="service-page2-container">
+                    <img src="../static/assests/tvproduction.jpg" alt="">
+                    <h1>TV Production</h1>
+                    <p>Rainbow pictues has been involved by making television series for different satellite channels. Rainbow Pictures makes all kind of TV program be it fiction or non-fiction or Docudrama.
+
+                        We have vast experience in producing programs for the televisons.</p>
+                </div>
+                <div id="service-page2-container">
+                    <img src="../static/assests/Post production.jpg" alt="">
+                    <h1>Post production</h1>
+                    <p>With extensive in-house editing facilities. We are totally flexible to client requirements. In addition to Video content, we can provide screen Graphics, titles, Voice-overs, Original Music Scores. From digitizing , Editing and Uploading, through to a full, On -line Post-Production service with After-effects, we offer a full range of Post-Production services.</p>
+                </div>
+                <div id="service-page2-container">
+                    <img src="../static/assests/Our Corporate Work includes.jpg" alt="">
+                    <h1>Our Corporate Work includes</h1>
+                    <p>Corporate film/ Corporate Video / Corporate AV Trade Show Exposition Film, Conference & Event Coverage/ Training Film/ Motivational Film/ Internal Communication/ Corporate Film Product Launch / Film Corporate Annual Progress, Film educational, Film Product/ Service Demonstration Film Brand Building Film. </p>
+                </div>
+                <div id="service-page2-container">
+                    <img src="../static/assests/mediaconsultant.jpg" alt="">
+                    <h1>Media Consultant</h1>
+                    <p>Media Consultancy is offered by us to provide valuable advice to the clients in relation to choosing the different types of media by them to make excel in whatever field they are operating. Our highly qualified media consultants suggest various measures and steps to the clients in order to make them highly informative in order to make  it easy for them to pick the right media channel for their future growth and prosperity.</p>
+                </div>
+                <div id="service-page2-container">
+                    <img src="../static/assests/TV Commercial  TV Spots.jpg" alt="">
+                    <h1>TV Commercial / TV Spots</h1>
+                    <p>Telling a story and communicating a message in 30-60 seconds requires a great deal of focus and concentration during the development and writing phase. we’re always excited to tackle a new commercial project for TV distribution and also for web. We understand the power of online advertisement through viral video on You tube and other online mediums.</p>
+                </div>
+                <div id="service-page2-container">
+                    <img src="../static/assests/Community Radio Setup.jpg" alt="">
+                    <h1>Community Radio Setup</h1>
+                    <p>Media Consultancy is offered by us to provide valuable advice to the clients in relation to choosing the different types of media by them to make excel in whatever field they are operating. Our highly qualified media consultants suggest various measures and steps to the clients in order to make them highly informative in order to make  it easy for them to pick the right media channel for their future growth and prosperity.</p>
+                </div>
+                <div id="service-page2-container">
+                    <img src="../static/assests/nonprofitvideofilm.jpg" alt="">
+                    <h1>Non Profit Video Film</h1>
+                    <p>Video is a powerful tool to tell your non-profit’s story in a compelling way to garner support for a project or initiative. Video support is an important addition to any fundraising campaign and serves as avital educational tool for a potential donors. At Rainbow pictures we’re dedicated to fulfilling opportunity to live out that mission by producing many videos for the non-profit sectors.
+
+                        our end goal is to make meaning with every production. </p>
+                </div>
+        </div>
+        <div id="service-page3">
+            <div class="service-page3-container">
+                <h1>200+</h1>
+                <p>WINNING AWARDS</p>
+            </div>
+            <div class="service-page3-container">
+                <h1>1000</h1>
+                <p>BEST SHOTS</p>
+            </div>
+            <div class="service-page3-container">
+                <h1>1240</h1>
+                <p>COMPLETED PROJECT</p>
+            </div>
+            <div class="service-page3-container">
+                <h1>1150
+                </h1>
+                <p>HAPPY CLIENTS</p>
+            </div>
+        </div>
+    </div>
+    {% include 'Footer.html' %}
+</body>
+</html>

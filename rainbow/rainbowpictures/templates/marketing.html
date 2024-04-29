@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          #marketing{
+            overflow: hidden;
+        }
+        #marketing-page1 {
+        width: 100%;
+        height: 80vh;
+        position: relative;
+      }
+
+      #marketing-page1 img {
+        width: 100%;
+        height: 100%;
+        filter: brightness(60%);
+        object-fit: cover;
+      }
+      #marketing-page1 h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 5vw;
+        text-transform: capitalize;
+        color: #f81f01;
+      }
+      #marketing-page2{
+        padding: 3vw 20vw;
+      }
+      #marketing-page2{
+        padding: 3vw;
+      }
+      #marketing-page2 h1{
+        font-size: 3vw;
+        /* color: #232323c4; */
+      }
+      #marketing-page2 h3{
+        font-size: 2vw;
+        margin: 1vw 0;
+        /* color: #232323c4; */
+      }
+      #marketing-page2 p{
+        margin: 1.5vw 0;
+        font-size: 1.2vw;
+        color: #232323c4;
+      }
+      #marketing-page2 li{
+        font-size: 1.2vw;
+        color: #232323c4;
+        list-style-position: inside;
+      }
+      #marketing-page2 b{
+        color: black;
+      }
+      @media (max-width:720px){
+        #marketing-page1{
+          height: 45vh;
+        }
+      }
+    </style>
+</head>
+<body>
+    {% include 'Navbar.html' %}
+
+    <div id="marketing">
+        <div id="marketing-page1">
+            <img src="../static/assests/digitalmarketing.jpg" alt="">
+            <h1>Digital Marketing</h1>
+        </div>
+        <div id="marketing-page2">
+            <h1>Rainbow Pictures: Your Vision. Amplified.</h1>
+            <p>In today's digital age, a strong online presence is essential for any business. At Rainbow Pictures, we're passionate about helping businesses like yours unlock the power of digital marketing to achieve real results.</p>
+            <h3>Here's what sets us apart:</h3>
+            <ul>
+                <li><b>	Creative Storytelling: </b>We craft compelling narratives that resonate with your target audience, building brand loyalty and trust.</li>
+            </ul>
+            <ul>
+                <li><b>		Data-Driven Strategies: </b>We don't just throw darts in the dark. Our data-driven approach ensures your marketing efforts are targeted and effective.</li>
+            </ul>
+            <ul>
+                <li><b>	Measurable Results: </b>We track key metrics to demonstrate the impact of our work, keeping you informed and on track with your goals.</li>
+            </ul>
+            <ul>
+                <li><b>	A Collaborative Approach:  </b> We believe in working closely with our clients to understand their unique needs and vision.</li>
+            </ul>
+            <h3> We believe in working closely with our clients to understand their unique needs and vision.</h3>
+            <ul>
+                <li><b>	Social Media Marketing: </b>We'll develop and execute engaging social media campaigns that drive brand awareness and customer engagement.</li>
+                <li><b>		Search Engine Optimization (SEO): </b>We'll optimize your website to rank higher in search engine results, attracting more qualified leads.</li>
+                <li><b>	Pay-Per-Click (PPC) Advertising: </b>We'll create targeted PPC campaigns to reach your ideal customers across search engines and social media platforms.</li>
+                <li><b>	Content Marketing: </b>We'll develop high-quality content that educates, entertains, and inspires your audience.</li>
+                <li><b>	Email Marketing: </b>We'll craft targeted email campaigns to nurture leads and convert them into loyal customers.</li>
+            </ul>
+            <h3>Ready to stand out from the crowd?</h3>
+            <p>Contact Rainbow Pictures today for a free consultation. Let's discuss your digital marketing goals and how we can help you achieve them.</p>
+            <p><b>Don't forget to add a call to action (CTA) button! </b>This could be "Get a Free Quote," "Schedule a Consultation," or something similar.</p>
+            <h3>Here are some additional website content ideas:</h3>
+            <ul>
+                <li><b>	Client testimonials: </b>Showcase the success stories of your past clients.</li>
+                <li><b>	Blog:  </b>Share valuable insights and industry trends to establish yourself as a thought leader.</li>
+                <li><b>	Case studies: </b>Demonstrate your expertise with detailed case studies of your work.</li>
+            </ul>
+            <p>By providing valuable content and a clear call to action, your website will not only inform potential clients about your services but also convert them into paying customers.</p>
+        </div>
+    </div>
+    {% include 'Footer.html' %}
+</body>
+</html>

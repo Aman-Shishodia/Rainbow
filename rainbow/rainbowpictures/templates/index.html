@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      
+#page1{
+    /* background-color: aqua; */
+    height: 120vh;
+    overflow: hidden;
+    position: relative;
+}
+
+nav{
+    width: 100%;
+    color: #fff;
+    position: absolute;
+    /* top: 0; */
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vw 2.5vw;
+    z-index: 100;
+}
+
+#nav-part1 img{
+    width: 10vw;
+}
+
+#nav-part2{
+    margin-left: 10vw;
+    display: flex;
+    gap: 3vw;
+}
+
+#nav-part2 li{
+    font-size: 1.5vw;
+    text-transform: capitalize;
+    list-style: none;
+    cursor: pointer !important;
+}
+
+#nav-part2 li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+#nav-part2 li a:hover{
+    color: #ee076e;
+}
+
+#page1 video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#page1-text{
+    position: absolute;
+    bottom: 20%;
+    left: 2%;
+    color: #dad9d9;
+}
+
+#page1-text h1{
+    font-size: 4.5vw;
+    font-weight: 900;
+    line-height: 3.7vw;
+}
+
+#page1-text p{
+    margin-top: 2vw;
+    width: 50%;
+    font-size: 1.4vw;
+    font-weight: 100;
+    line-height: 2vw;
+}
+
+#page2{
+    padding: 3vw;
+    height: 72vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    /* color: #dad9d9; */
+}
+
+#page2-part1{
+    width: 40%;
+}
+
+#page2-part1 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+#page2-part2{
+    width: 55%;
+}
+
+#page2-part2 h1{
+    font-size: 4vw;
+    font-weight: 900;
+    /* margin-bottom: 3.5vw; */
+    padding-bottom: 1vw;
+    color: #000000e8;
+}
+
+#page2-part2 p{
+    color: #232323c4;
+    font-size: 1.2vw;
+    font-weight: 200;
+    /* margin: 2vw 0; */
+    padding-top: 4vw;
+}
+
+#page2-part2 p:nth-child(3){
+    margin-bottom: 1.2vw;
+}
+
+#page2-part2 a{
+    text-decoration: none;
+    margin: 2vw 0;
+    font-size: 1.2vw;
+    color: #f6307ce4;
+}
+
+
+#page3{
+    background-color: #F8F7FD;
+    display: flex;
+    padding: 3vw;
+    color: #1F1F25;
+    /* justify-content: space-between; */
+}
+
+#page3-part1{
+    width: 35%;
+}
+
+#page3-part1 h1{
+    font-size: 4vw;
+    font-weight: 900;
+}
+
+#page3-part1 p{
+    font-size: 1.2vw;
+    padding-bottom: 1.2vw;
+    /* color: #232323c4; */
+}
+
+#page3-part1 a{
+    /* color: #232323c4; */
+    text-decoration: none;
+    font-size: 1.2vw;
+    color: #f6307ce4;
+}
+
+#page3-part1 a:hover{
+    color: #f30e65;
+}
+
+#page3-part2{
+    width: 77%;
+    display: grid;
+    /* gap: 3vw; */
+    column-gap: 4vw;
+    grid-template-columns: 1fr 1fr;
+}
+
+.page3-container{
+    padding: 1vw 2vw;
+    width: 100%;
+    /* height: 40vh; */
+    height: auto;
+}
+
+.page3-container:hover{
+    color: #fff;
+    background-image: linear-gradient(90deg, #f61b10, #ef0963);
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px 3px #ee076e;
+}
+
+
+.page3-container:hover p{
+    color: #fff;
+    /* font-size: 1.6vw; */
+}
+.page3-container:hover h2{
+    color: #fff;
+    /* font-size: 1.6vw; */
+}
+
+.page3-container h2{
+    font-size: 2vw;
+    color: #1F1F25;
+}
+
+.page3-container p{
+    /* word-spacing: 3vw; */
+    font-size: 1.2vw !important;
+    letter-spacing: .1vw;
+    /* width: 95%; */
+    color: #000000db;
+    padding: 1vw 0;
+}
+
+#page4{
+    padding: 3vw;
+}
+
+#page4>h1{
+    text-align: center;
+    font-size: 4vw;
+    font-weight: 900;
+    text-transform: capitalize;
+    margin: 2.5vw 0;
+}
+
+#page4-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.page4-container{
+    width: 32%;
+}
+
+.page4-container h1{
+    font-size: 4vw;
+    margin: 1.4vw 0;
+    margin-bottom: 3vw;
+    font-weight: 700;
+}
+
+.page4-container h3{
+    font-size: 1.6vw;
+    font-weight: 600;
+    padding: 1vw 0;
+}
+
+.page4-container p{
+    font-size: 1.2vw;
+    line-height: 2vw;
+    letter-spacing: .1vw;
+}
+
+
+      @media (max-width: 720px) {
+        #main #page1{
+          height: 45vh;
+        }
+        #main #page2 {
+          flex-direction: column;
+          /* border: 2px solid red; */
+          height: 55vh;
+        }
+        #main #page2 img{
+          height: 40vh;
+          object-fit: cover;
+          object-position: center;
+        }
+        #main #page2-part2{
+          height: 40vh;
+        }
+        #main #page2-part2 img{
+          height: 40vh;
+          object-position: center;
+          border-radius: 2px;
+        }
+        #main #page2-part1 {
+          width: 100%;
+        }
+        #main #page2-part2 {
+          width: 100%;
+        }
+        #main .page3-container{
+          height: 8vh;
+          /* border: 2px solid green; */
+        }
+        #main #page2-part2 p {
+          padding-top: 1vw;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    {% include 'Navbar.html' %}
+    <div id="main">
+      <div id="page1">
+        <video loop autoplay muted>
+          <source
+            src="../static/assests/Front-page-BG_2.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <div id="page1-text">
+          <h1>WELCOME TO</h1>
+          <h1>RAINBOW</h1>
+          <h1>PRODUCTION HOUSE</h1>
+          <p>
+            We believe that every brand or an organization has a unique story
+            and it needs to be effectively communicated to their audience, so we
+            make it a habit to conceptualize and produce visually driven content
+            that can positively impact the audience.
+          </p>
+        </div>
+      </div>
+      <div id="page2">
+        <div id="page2-part1">
+          <img src="../static/assests/about.jpg" alt="" />
+        </div>
+        <div id="page2-part2">
+          {% for msg in Messages %}
+          <h1>{{msg}}</h1>
+          {% endfor %}
+          <h1>About</h1>
+          <p>
+            Rainbow Pictures as the name suggests is a production house engaged
+            in providing production and post production services for
+            advertisement and various other media. We provide assistance to
+            various reputed organization for all their sound as well as video
+            editing needs, voice overs, visual and special effects, etc.
+          </p>
+          <p>
+            Our service range includes Ad Film making, Documentary,/Short Film
+            Making, Video Film production/ Video Editing, Non Linear Editing,
+            Audio Visual Production, Community radio Setup, Video Coverage,
+            Advertising , Audio recording/ Dubbing and Media Consultancy.
+          </p>
+          <a href='{% url "About" %}'>Read More</a>
+        </div>
+      </div>
+      <div id="page3">
+        <div id="page3-part1">
+          <h1>Services</h1>
+          <p>
+            At Rainbow Production, we deliver anything and everything that has
+            to do with video productions, photography, animations, and beyond.
+          </p>
+          <a href='{% url "Services" %}'>Get in touch</a>
+        </div>
+        <div id="page3-part2">
+          <div class="page3-container">
+            <h2>TV Production</h2>
+            <p>
+              Rainbow pictures has been involved by making television series for
+              different satellite channels. Rainbow Pictures makes all kind of
+              TV program be it fiction or non-fiction or Docudrama.
+            </p>
+          </div>
+          <div class="page3-container">
+            <h2>Media Consultant</h2>
+            <p>
+              Media Consultancy is offered by us to provide valuable advice to
+              the clients in relation to choosing the different types of media
+              by them to make excel in whatever field they are operating.
+            </p>
+          </div>
+          <div class="page3-container">
+            <h2>Broadcast Equipment</h2>
+            <p>
+              Telling a story and communicating a message in 30-60 seconds
+              requires a great deal of focus and concentration during the
+              development and writing phase.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="page4">
+        <h1>our timeline</h1>
+        <div id="page4-content">
+          <div class="page4-container">
+            <img src="../static/assests/start.png" alt="" />
+            <h1>1.Start</h1>
+            <h3>Pre Production</h3>
+            <p>
+              Once you submit the brief and confirm the project with us, our
+              team of account directors will do the rest. Plan, strategize, set
+              deadlines, and moderate every task from script to finish.
+            </p>
+            <p>Timeline : 2-3 Days</p>
+          </div>
+          <div class="page4-container">
+            <img src="../static/assests/collab.png" alt="" />
+            <h1>2.Collab</h1>
+            <h3>Production</h3>
+            <p>
+              Once we finish the pre-production stage according to the approved
+              plan, we proceed to shoot. Our crew will make sure that we have a
+              seamless journey throughout the shoot days.
+            </p>
+            <p>Timeline : 1-2 Days</p>
+          </div>
+          <div class="page4-container">
+            <img src="../static/assests/Approve.png" alt="" />
+            <h1>3.Approve</h1>
+            <h3>Post - Production</h3>
+            <p>
+              Share your feedback using our technology, which allows you to add
+              comments directly on the video with real-time playback along with
+              your colleagues anywhere in the world, creating faster approvals.
+            </p>
+            <p>Timeline : 2-3 Days</p>
+          </div>
+        </div>
+      </div>
+
+      {% include 'Footer.html' %}
+    </div>
+  </body>
+</html>

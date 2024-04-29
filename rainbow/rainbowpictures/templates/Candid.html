@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #candid{
+            overflow: hidden;
+        }
+        #candid-page1 {
+        width: 100%;
+        height: 80vh;
+        position: relative;
+      }
+
+      #candid-page1 img {
+        width: 100%;
+        height: 100%;
+        filter: brightness(60%);
+        object-fit: cover;
+      }
+      #candid-page1 h1 {
+        position: absolute;
+        top: 50%;
+        color: #232323c4;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 5vw;
+        text-transform: capitalize;
+        color: #f81f01;
+      }
+      #candid-page2{
+        padding: 3vw;
+      }
+      #candid-page2 h1{
+        font-size: 3vw;
+        /* color: #232323c4; */
+      }
+      #candid-page2 h3{
+        font-size: 2vw;
+        /* color: #232323c4; */
+        margin: 1vw 0;
+      }
+      #candid-page2 p{
+        margin: 1.2vw 0;
+        font-size: 1.5vw;
+        color: #232323c4;
+      }
+      #candid-page2 li{
+        font-size: 1.2vw;
+        color: #232323c4;
+        list-style-position: inside;
+      }
+      #candid-page2 li b{
+        color: black;
+      }
+      @media (max-width:720px){
+        #candid-page1{
+          height: 45vh;
+        }
+      }
+    </style>
+</head>
+<body>
+    {% include 'Navbar.html' %}
+    <div id="candid">
+        <div id="candid-page1">
+            <img src="../static/assests/candid video.jpg" alt="">
+            <h1>Candid Videos</h1>
+        </div>
+        <div id="candid-page2">
+            <h1>Capture Life's Unforgettable Moments with Rainbow Pictures' Candid Videos</h1>
+            <p>At Rainbow Pictures, we believe in the magic of genuine emotions. That's why we specialize in crafting stunning candid videos in resolutions ranging from crystal-clear 4K to breathtaking 8K. Our goal? To preserve life's most precious moments exactly as they unfold, capturing the raw beauty and unscripted joy that makes your story unique.</p>
+            <h3>What are Candid Videos?</h3>
+            <p>Candid videos, unlike traditional staged productions, focus on capturing natural interactions and spontaneous expressions. We use discreet filming techniques to document real moments, from heartwarming laughter and playful antics to the tender tears of happiness.</p>
+            <h3>Why Choose Rainbow Pictures for Your Candid Videos?</h3>
+            <ul>
+            <li>
+               <b>Unparalleled Quality:</b> We offer a variety of resolutions, including 4K, 6K, and 8K, ensuring your candid moments are preserved in stunning detail.
+            </li>
+            <li>
+                <b>	Experienced Videographers: </b>  Our team of skilled videographers understands the art of capturing natural moments without being intrusive.
+            </li>
+            <li>
+                <b>	Discreet Filming: </b>We use subtle filming techniques to ensure your guests and loved ones feel comfortable and relaxed throughout the event.
+            </li>
+            <li>
+                <b>	Storytelling Expertise: </b> We go beyond simply recording footage. We weave your candid moments into a cohesive narrative, creating a video that is both beautiful and emotionally resonant.
+            </li>
+        </ul>
+            <h3>Perfect for Every Occasion:</h3>
+            <p>Our candid video services are ideal for capturing a wide range of events, including:</p>
+            <ul>
+                <li> <b>Weddings:</b> Showcase the genuine joy and heartwarming connections that make your wedding day unforgettable.</li>
+                <li> <b>Family Gatherings:</b> Preserve the laughter, love, and inside jokes that make your family so special.</li>
+                <li> <b>Graduations: </b>Commemorate this milestone with candid moments that capture the pride and excitement of the day.</li>
+                <li> <b>Birthday Parties:</b> Relive the fun and festive atmosphere with candid shots of friends and family celebrating together.</li>
+                <li>And so much more!</li>
+
+            </ul>
+            <!-- <h3>Let Rainbow Pictures Help You Tell </h3> -->
+            <h3>Your Story</h3>
+            <p>Contact Rainbow Pictures today and let us discuss how we can create stunning candid videos that will become cherished keepsakes for you and your loved ones for years to come.  We'll help you capture the essence of your event, preserving the genuine emotions and unscripted moments that make your story truly unique.</p>
+        </div>
+    </div>
+    {% include 'Footer.html' %}
+</body>
+</html>

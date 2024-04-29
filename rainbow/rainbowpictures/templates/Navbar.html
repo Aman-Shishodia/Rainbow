@@ -1,0 +1,150 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'index.css' %}" />
+    <title>Document</title>
+    <style>
+      
+#menu {
+  padding: 10px 18px;
+  /* color: #fff; */
+  border: 1px solid rgba(11, 5, 0, 0.2);
+  display: flex;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  display: none;
+}
+
+#menu-box {
+  height: 100vh;
+  width: 100%;
+  background-color: #0000007e;
+  position: fixed;
+  top: -110%;
+  left: 0;
+  z-index: 1000;
+  transition: all 0.3s linear;
+}
+
+#menu-items {
+  height: 50vh;
+  width: 100%;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  background-color: #efeae3;
+}
+
+@media (max-width: 720px) {
+
+ nav #nav-part2{
+    display: none;
+    /* background-color: aqua; */
+  }
+  nav #menu {
+    display: inline-block;
+    font-size: 2vw;
+    padding: 1.5vw 2.5vw;
+    font-weight: 200;
+    z-index: 10000;
+    background-color: #efeae3;
+    /* color: black; */
+    color: #f81f01;
+  }
+  nav #menu-box {
+  height: 100vh;
+  /* height: auto; */
+  width: 100%;
+  background-color: #0000007e;
+  position: fixed;
+  top: -110%;
+  left: 0;
+  z-index: 1000;
+  transition: all 0.3s linear;
+}
+
+nav #menu-items {
+  height: auto;
+  width: 100%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #efeae3;
+  padding: 3vw 0;
+  padding-bottom: 5vw;
+}
+nav #menu2{
+  font-size: 4vw;
+  padding: 2vw 1vw;
+}
+nav #menu-items li{
+  list-style: none;
+  padding: 1vw 2vw;
+}
+nav #menu-items li a{
+  text-decoration: none;
+  font-size: 3vw;
+  text-transform: capitalize;
+  color: black;
+}
+  #page1{
+    height: 60vh;
+  }
+}
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div id="nav-part1">
+        <img src="../static/assests/Cropped_Rainbow_Pictures-removebg-preview.png" alt="">
+      </div>
+      <div id="nav-part2" >
+        <li><a href='{% url "Home" %}'>home</a></li>
+        <li><a href='{% url "About" %}'>about</a></li>
+        <li><a href='{% url "Portfolio" %}'>portfolio</a></li>
+        <li><a href='{% url "Clients" %}'>clients</a></li>
+        <li><a href='{% url "Services" %}'>services</a></li>
+        <li><a href='{% url "Candid" %}'>Candid Video</a></li>
+        <li><a href='{% url "Marketing" %}'>Marketing</a></li>
+        <li><a href='{% url "Contact" %}'>contact</a></li>
+      </div>
+      <div id="menu">
+         Menu
+          <div id="menu-box">
+            <div id="menu-items">
+              <div id="menu2"> Rainbow Pictures</div>
+              <div>
+
+                <li><a href='{% url "Home" %}'>home</a></li>
+                <li><a href='{% url "About" %}'>about</a></li>
+                <li><a href='{% url "Portfolio" %}'>portfolio</a></li>
+                <li><a href='{% url "Clients" %}'>clients</a></li>
+                <li><a href='{% url "Services" %}'>services</a></li>
+                <li><a href='{% url "Candid" %}'>Candid Video</a></li>
+                <li><a href='{% url "Marketing" %}'>Marketing</a></li>
+                <li><a href='{% url "Contact" %}'>contact</a></li>
+              </div>
+            </div>
+          </div>
+      </div>
+    </nav>
+  </body>
+  <script>
+menu=document.querySelector("#menu")
+box=document.querySelector("#menu-box")
+let flag=0
+menu.addEventListener("click",function () {
+  if(flag == 0){
+    box.style.top=0
+    flag = 1
+  }else{
+    box.style.top="-110%"
+    flag=0
+  }
+})
+  </script>
+</html>
+
