@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-bh@i2wdsf7!ks$oii^s_ar^^5tndw2zpc6u=9tns%#8@f$uxut'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -133,8 +133,6 @@ STATIC_ROOT = os.path.dirname(__file__)+'static/'
 STATIC_URL='static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR,'static/assests/')
-
-
 
 
 
